@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Extractor",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://directory.esomar.org/country*"],
+      "js": ["jquery-3.2.0.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "favicon_192x192.png"
+  }
+}
