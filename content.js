@@ -13,22 +13,15 @@ pages_elem.each((index, elem) => {
 Promise.all(country_company_pages.map(country_pages => {
     return $.get(country_pages.page)
         .done(data => {
-            console.log(data);
             return data;
         })
 }))
     .then(datas => {
         datas.forEach(data => {
-            let companies_det = $('.bg-eso-lightblue h2.mb0');
+            let companies_det = $(data).find('.bg-eso-lightblue h2.mb0');
             console.log(companies_det);
         })
     })
     .catch(err => {
         console.log(err.message);
     })
-// $.post('https://iapac-dashboard.herokuapp.com/getsite', country_company_pages, (data) => {
-//     console.log(data);
-//
-// })
-
-//console.log(country_company_pages);
