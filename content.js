@@ -1,3 +1,8 @@
+/***
+ * Esomar Extractor
+ * By Chanx Singha <chanx.designs@gmail.com>
+ */
+
 // Notify User Silently
 console.log("Extraction Started");
 
